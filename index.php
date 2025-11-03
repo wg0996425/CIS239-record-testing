@@ -37,10 +37,8 @@ require_once __DIR__ . '/data/functions.php'
 
     <h2>Unit Test 3 — Insert</h2>
     <?php
-    echo("Insert success: " )
+    $list = record_insert("Demo Title", "Demo Artist", 9.99, 1);
     ?>
-
-
 
 </body>
 
