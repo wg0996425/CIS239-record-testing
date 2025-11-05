@@ -5,11 +5,11 @@ $rows = records_all();
 
 ?>
 
-<table>
+<table class="table">
     <thead>
         <th>Title</th>
         <th>Artist</th>
-        <th>Price</th>
+        <th class="text-end" style="width:100px;">Price</th>
         <th>Format</th>
     </thead>
     <tbody>
