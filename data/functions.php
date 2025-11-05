@@ -40,15 +40,12 @@ function record_insert(string $title, string $artist, float $price, int $format_
         ':price'     => $price,
         ':format_id' => $format_id
     ]);
-    $rowCount = $stmt->rowCount();
+}
 
-    if ($rowCount >= 1) {
-        echo("Insert success: true, rows: $rowCount <br>");
-        echo("Newest: $title -- $format_id");
-    }
-    else {
-        echo("Insert success: false, rows: $rowCount");
-    }
+function formats_all_query(): array
+{
+    $pdo = get_pdo();
+    return $pdo->query("SELECT id, name FROM formats ORDER BY name")->fetchAll();
 }
 
 
